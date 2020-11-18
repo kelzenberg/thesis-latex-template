@@ -1,0 +1,99 @@
+\documentclass[11pt, a4paper]{book}
+
+\input{packages.tex}
+\input{libraries/acronyms_glossary.tex}
+
+\begin{document}
+
+% turns off page numbering until re-activated
+\pagenumbering{gobble}
+
+%
+% Titlepage
+%
+\input{1_frontmatter/titlepage.tex}
+
+%
+% Confidelity
+%
+\input{1_frontmatter/confidelity.tex}
+
+
+%
+% Declaration
+%
+\input{1_frontmatter/declaration.tex}
+
+
+%
+% Acknowledgements
+%
+\input{1_frontmatter/acknowledgements.tex}
+
+
+%
+% Table of Contents
+%
+\input{1_frontmatter/toc.tex}
+
+%
+% Configuration for Header and Footer
+%
+\pagestyle{fancy}
+\setlength{\headheight}{14pt} % fix warning for varying headheights in document
+\fancyhead{} % clear all header fields
+\fancyhead[LO]{\textsl{\rightmark}} % section title (odd-left)
+\fancyhead[RE]{\textsl{\leftmark}} % chapter title (even-right)
+\fancyhead[RO,LE]{\thepage} % page number next to titles (odd & even)
+\fancyfoot{} % clear all footer fields
+\renewcommand{\headrulewidth}{0.4pt} % Line strength in header % \renewcommand{\footrulewidth}{0.4pt} % Line strength in footer
+
+%
+% Acronyms & Glossaries
+%
+\input{1_frontmatter/acronyms_glossary.tex}
+
+%
+% Abstract
+%
+\input{1_frontmatter/abstract.tex}
+
+% reset to arabic page numbering for chapters (default)
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%
+% Chapters 
+%
+\input{2_bodymatter/ch1.tex}
+\input{2_bodymatter/ch2.tex}
+\cleardoublepage
+
+% restore roman page numbering for secondary pages
+\pagenumbering{roman}
+\setcounter{page}{42} % WORKAROUND: update number manually depending on the glossary length!
+
+%
+% List of Figures
+%
+\input{3_backmatter/figures.tex}
+
+%
+% List of Tables
+%
+% \input{3_backmatter/tables.tex}
+
+
+%
+% List of Listings
+%
+\input{3_backmatter/listings.tex}
+
+
+%
+% Bibliography & Sources 
+%
+\input{3_backmatter/bibliography_sources.tex}
+\end{document}
+
+% LaTeX template made by github.com/kelzenberg

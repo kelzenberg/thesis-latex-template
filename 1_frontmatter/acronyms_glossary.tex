@@ -1,0 +1,11 @@
+% \glsaddall to display all *used* entries
+
+% for some reason this needs to be placed between acronyms and glossary pages:
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\printnoidxglossary[type=\acronymtype] % Acronyms
+
+\printnoidxglossary[type=main] % Glossary
+
+\cleardoublepage

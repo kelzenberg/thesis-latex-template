@@ -1,0 +1,92 @@
+% use UTF-8 encoding
+\usepackage[utf8]{inputenc}
+
+% use english wording
+\usepackage[english]{babel}
+
+% layout pages easier
+\usepackage[]{geometry}
+\usepackage{layout}
+
+% modify \LaTeX commands easier...
+\usepackage{etoolbox}
+% ...to configure space above chapters
+\makeatletter
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{20pt}}{}{}%
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{\vspace*{20pt}}{}{}%
+\makeatother
+
+% remove any elements (like headers) from empty pages
+\usepackage{emptypage}
+
+% configure headers and footers better
+\usepackage{fancyhdr}
+
+% use images from files...
+\usepackage{graphicx}
+% ...and configure picture paths
+\graphicspath{
+  {images/},
+}
+
+% wrap text around figures
+\usepackage{wrapfig}
+
+% make listing labels/keys configurable
+\usepackage{enumitem}
+
+% add figures, tables and bibliography to ToC
+\usepackage[nottoc]{tocbibind}
+
+% use URLs and inner-document linking
+\usepackage{hyperref}
+% ...and configure the style
+\hypersetup{
+  hidelinks,
+  colorlinks=false,
+  linkcolor=black,
+  filecolor=black,
+  urlcolor=black,
+}
+\urlstyle{same}
+
+% add code styling
+\usepackage{listings}
+\usepackage{xcolor}
+% ...and configure the styles
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% style code...
+\lstdefinestyle{codeStyle}{
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+\lstset{style=codeStyle}
+
+% enable strikethrough texts
+\usepackage{soul}
+
+% auto optimize typography and resolves wrapping issues ("h-box too wide")
+\usepackage{microtype}
+
+% use acronym lists and glossaries
+\usepackage[acronym, toc]{glossaries}
+
+% create blind texts
+\usepackage{lipsum}
