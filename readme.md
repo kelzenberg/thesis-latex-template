@@ -2,27 +2,27 @@
 
 **Custom** [LaTeX](https://www.latex-project.org/) template – created for my thesis at the [Beuth University of Applied Sciences Berlin](https://www.beuth-hochschule.de/en/).
 
-> **This is not an official template of the Beuth University!**
+> **This is not an official template for the Beuth University!**
 
-## How to Typeset (build & preview LaTeX files)
+## How to Typeset (build LaTeX & view PDF files)
 
 - install LaTeX and an editor/previewer (comes often bundled) from e.g. the [LaTeX Project](https://www.latex-project.org/get/)
 - clone this repo
 - open the `main.tex` file with your installed LaTeX editor/previewer
 - run the `Typeset` action or the equivalent in your editor/previewer
-- (optionally run the `Typeset` action several times if errors/warnings appear in the console on the first pass)
-- open the preview area of your editor/previewer or open the `main.pdf` file to see the results
+- (optionally run the `Typeset` action again if errors/warnings appear in the console on the first pass. They might disappear.)
+- open the preview area of your editor/previewer or open the `main.pdf` file to see the typeset/generated result
 
 ## How to navigate
 
-- `main.tex` is your root entry point of your document
-- `main.pdf` is always the latest _generated_ PDF file of your typesetted document
-- `1_frontmatter/` includes everything that comes _before_ your actual content
-- `2_bodymatter/` includes everything that is your custom content
-- `3_backmatter/` includes everything that comes _after_ your actual content
-- `images/` is where all images belong (I recommend `.eps` files for graphics and diagrams etc.)
+- `main.tex` is your root entry point of your LaTeX document
+- `main.pdf` is always the latest _generated_ PDF file of your typeset document
+- `1_frontmatter/` includes everything that comes _before_ your actual content (see [front matter](https://en.wiktionary.org/wiki/front_matter))
+- `2_bodymatter/` includes everything that is your personal content (see [body matter](https://en.wiktionary.org/wiki/body_matter))
+- `3_backmatter/` includes everything that comes _after_ your actual content (see [back matter](https://en.wiktionary.org/wiki/back_matter))
+- `images/` is where all images belong (I recommend vector-based `.eps` files for graphics and diagrams etc.)
 - `libraries/` is where the bibliography and glossary store their entries
-- `packages.tex` is a list of all added plugins
+- `packages.tex` is a list of all added LaTeX packages & some of their settings 
 
 ### Disclaimer
 
@@ -46,7 +46,7 @@ Like this workaround in the `main.tex` file, you need to know about:
 You are very welcome to fix bugs within this project.
 
 1. Create a pull request for this repo
-2. Include an explanation of your changes (how & why)
+2. Include an explanation of your changes (what, why & how)
 3. Always make it nicer (not harder) for the next person
 
 Thank you & keep studying!
