@@ -1,8 +1,8 @@
 # Custom LaTeX template for theses
 
-**Custom** [LaTeX](https://www.latex-project.org/) template – created for my thesis at the [Beuth University of Applied Sciences Berlin](https://www.beuth-hochschule.de/en/).
+**Custom** [LaTeX](https://www.latex-project.org/) template – created for my thesis at the [Berliner Hochschule für Technik](https://www.bht-berlin.de/en/).
 
-> **This is not an official template for the Beuth University!**
+> **This is not an official template of the Berliner Hochschule für Technik!**
 
 ## How to Typeset (build LaTeX & view PDF files)
 
